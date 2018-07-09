@@ -52,6 +52,15 @@ table {
 
 /*************Small screens*************/
 @media (max-width: 1200px){
+    
+        header {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        header p {
+            padding: 2em 1em;
+        }
         /*Nav bar*/
         /*Since we're not supposed to use any JS I decided to just have the menu scrollable on smaller screens as
         an alternative to the hamburger menu*/
@@ -66,7 +75,7 @@ table {
             color: white;
             text-align: center;
             color: black;
-            padding: 1em 2em;
+            padding: 1em 3em;
             text-decoration: none;
         }
     
@@ -249,3 +258,19 @@ tr:nth-child(even) {
     background: rgba(163, 163, 163, 0.2);
 }
 
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
