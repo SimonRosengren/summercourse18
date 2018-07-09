@@ -122,6 +122,12 @@ table {
         justify-content: space-around;
     }
 
+    /*Hide the scroll indicators on large screens*/
+    .scroll-indicator {
+        display: none;
+    }
+
+
     nav a {
         color: black;
         margin: 1em;
