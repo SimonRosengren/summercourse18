@@ -1,0 +1,251 @@
+/****GLOBAL RESET*****/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*************Small screens*************/
+@media (max-width: 1200px){
+        /*Nav bar*/
+        /*Since we're not supposed to use any JS I decided to just have the menu scrollable on smaller screens as
+        an alternative to the hamburger menu*/
+        nav{
+            overflow: auto;
+            white-space: nowrap;
+            margin-top: 1em;
+        }
+    
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            color: black;
+            padding: 1em 2em;
+            text-decoration: none;
+        }
+    
+        /*GRID SYSTEM*/
+        .sm-row{
+            width: 100%;
+            clear: both;
+        }
+        .sm-col-10{
+            width: 10%;
+        }
+        .sm-col-20{
+            width: 20%;
+        }
+        .sm-col-30{
+            width: 30%;
+        }
+        .sm-col-33{
+            width: 33%;
+        }
+        .sm-col-40{
+            width: 50%;
+        }
+        .sm-col-50{
+            width: 50%;
+        }
+        .sm-col-70{
+            width: 70%;
+        }
+        .sm-col-90{
+            width: 90%;
+        }
+        .sm-col-100{
+            width: 100%;
+        }
+}
+
+/***************Large screens***************/
+
+@media (min-width: 1201px){
+    /*Nav bar*/
+    nav{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a {
+        color: black;
+        margin: 1em;
+        text-decoration: none;
+    }
+
+    nav a:hover{
+        font-weight: 900;
+    }
+
+    /*GRID SYSTEM*/
+    .lg-row{
+        width: 100%;
+        clear: both;
+    }
+    .lg-col-10{
+        width: 10%;
+    }
+    .lg-col-20{
+        width: 20%;
+    }
+    .lg-col-30{
+        width: 30%;
+    }
+    .lg-col-33{
+        width: 33%;
+    }
+    .lg-col-40{
+        width: 50%;
+    }
+    .lg-col-50{
+        width: 50%;
+    }
+    .lg-col-70{
+        width: 70%;
+    }
+    .lg-col-90{
+        width: 90%;
+    }
+    .lg-col-100{
+        width: 100%;
+    }
+}
+
+
+
+
+/***************************General rules**************************/
+
+
+body{
+    font-family: 'Cutive Mono', monospace;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+.img{
+    max-width: 100%;
+    max-height: 100%;
+} 
+section, article, aside, footer {
+   padding: 1em;
+   box-sizing: border-box;
+   width: 100%;
+   float: left;
+}
+
+h1 { 
+    display: block;
+    font-size: 2em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h3 { 
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h4 { 
+    display: block;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em;
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+}
+
+table caption{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+th {
+    border-bottom: 0.1em solid black;
+
+    font-weight: 900;
+}
+
+td {
+    border-bottom: 0.1em solid black;
+
+}
+
+tr:nth-child(even) {
+    background: rgba(163, 163, 163, 0.2);
+}
+
