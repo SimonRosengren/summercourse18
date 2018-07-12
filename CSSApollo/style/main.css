@@ -53,12 +53,13 @@ table {
 /*************Small screens*************/
 @media (max-width: 1200px){
     
-        header {
+    /*Nav wrapper exists to align the two arrows in the nav bar*/
+        .nav-wrapper {
             display: flex;
             justify-content: space-around;
         }
 
-        header p {
+        .nav-wrapper p {
             padding: 2em 1em;
         }
         /*Nav bar*/
@@ -111,6 +112,52 @@ table {
         .sm-col-100{
             width: 100%;
         }
+
+        header h1 {
+            text-align: center;
+            letter-spacing: 1em;
+            margin-top: 0.5em;
+            padding-bottom: 0.3em;
+            padding-left: 1em; /*To counter the letter spacing to the right of "logo"*/
+            font-weight: 400;
+            border-bottom: 2px solid black;
+        }
+
+        .form-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .form-container input[type=text], textarea {
+            padding: 1em;
+            margin: 1em 0;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    
+        .sm-form-input-50{
+            width: 49%;
+        }
+    
+        .sm-form-input-100{
+            width: 100%;
+        }
+    
+        .form-container input[type=submit] {
+            width: 100%;
+            padding: 0.3em 0;
+            margin: 1em 0;
+            border: none;
+            background: #aaffaa;
+            color: white;
+            font-family: 'Cutive Mono', monospace;
+            font-size: 2em;
+        }
+    
+        .form-container input[type=submit]:hover {
+            background: #77ff77;
+            cursor: pointer;
+        }
+
 }
 
 /***************Large screens***************/
@@ -130,7 +177,7 @@ table {
 
     nav a {
         color: black;
-        margin: 1em;
+        margin: 0em 1em 1em 1em;
         text-decoration: none;
     }
 
@@ -170,9 +217,50 @@ table {
     .lg-col-100{
         width: 100%;
     }
+
+    header h1 {
+        text-align: center;
+        letter-spacing: 4em;
+        margin-top: 0.5em;
+        padding-bottom: 0.3em;
+        padding-left: 4em; /*To counter letter spacing to the right of "logo"*/
+        font-weight: 400;
+        border-bottom: 2px solid black;
+    }
+
+
+    .form-container {
+        width: 30%;
+        margin: 0 auto;
+    }
+    .form-container input[type=text], textarea {
+        padding: 1em;
+        margin: 1em 0;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .form-input-50{
+        width: 49%;
+    }
+
+    .form-input-100{
+        width: 100%;
+    }
+
+    .form-container input[type=submit] {
+        width: 100%;
+        padding: 0.3em 0;
+        margin: 1em 0;
+        border: none;
+        background: #aaffaa;
+        color: white;
+        font-family: 'Cutive Mono', monospace;
+        font-size: 2em;
+    }
+
+
 }
-
-
 
 
 /***************************General rules**************************/
@@ -189,6 +277,8 @@ h1, h2, h3, h4 {
 .container{
     margin: 0 auto;
 }
+
+
 
 .img{
     max-width: 100%;
@@ -264,6 +354,7 @@ tr:nth-child(even) {
     background: rgba(163, 163, 163, 0.2);
 }
 
+/*Code taken from https://www.w3schools.com/howto/howto_css_arrows.asp*/
 i {
     border: solid black;
     border-width: 0 3px 3px 0;
@@ -280,3 +371,5 @@ i {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
+
+
