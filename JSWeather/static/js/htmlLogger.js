@@ -14,8 +14,6 @@ export function printWeatherByDateTime(json, tbID, datetime) {
         var sky = parseSkyInfo(weatherInfo[0].parameters[18].values[0]);
         var humidity = weatherInfo[0].parameters[5].values[0] + "%";
 
-
-
         tbl.insertRow(1)
         tbl.rows[1].innerHTML =
             '<td>' + time + '</td>' +

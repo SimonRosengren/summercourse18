@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     getWeather()
 })
 
+//Change lat and lon of "#weather_app" and then call this method to have the widget work
 function getWeather() {
     var weatherDiv = document.getElementById('weather_app');
     var lat = weatherDiv.getAttribute('lat');
@@ -32,6 +33,7 @@ function printToTable(data) {
     var tomorrowDate = new Date();
     tomorrowDate.setDate(tomorrowDate.getDate() + 1);
     tomorrowDate.setHours(18, 0, 0, 0);
+    console.log(tomorrowDate);
     printWeatherByDateTime(data, "tmrw-table", tomorrowDate);
     tomorrowDate.setHours(12, 0, 0, 0);
     printWeatherByDateTime(data, "tmrw-table", tomorrowDate);

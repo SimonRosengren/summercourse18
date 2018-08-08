@@ -1,0 +1,228 @@
+/****GLOBAL RESET*****/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*****************************************************************************/
+
+/*General rules*/
+
+body {
+	font-family: 'Montserrat', sans-serif;	
+	background-image: url('../images/layout/body-pattern.jpeg');
+	color: #1F1F1F;
+}
+
+i {
+	font-style: italic;
+	font-size: 0.7em;
+}
+
+button {
+	font-family: 'Montserrat', sans-serif;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0;
+}
+
+/*Pushes down the container a bit so when nav bar sticks to top
+to make it appear more smooth. .sticky + .container gives all container following sticky*/
+.sticky + .inner-container {
+	padding-top: 3em;
+  }
+
+h1, h2, h3, h4 {
+	display: block;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+
+h1 { 
+    font-size: 2em;
+    margin-bottom: 0.67em;
+}
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.83em;
+}
+h3 { 
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h4 { 
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+}
+
+aside, section, article, footer {
+	width: 100%;
+	background-color: white; 
+	padding: 1em;
+	margin: 1em 0;
+}
+
+figure {
+	width: 100%;
+	background-color: white; 
+	margin: 1em 0;
+}
+
+#price-table th, td {
+	border: 1px solid white;
+	padding: 1em;
+}
+
+#price-table th {
+	background: #FF9933;
+	color: white;
+}
+
+#price-table td {
+	background: #dde9ee;
+	color: black;
+}
+
+#price-table caption {
+	padding: 0.5em 0 1em 0;
+}
+
+#price-table {
+	width: 100%;
+	margin: 1em 0;
+	text-align: center;
+}
+
+/*Small screens*/
+@media (max-width: 1200px){
+	.large {
+		display: none;
+	}
+
+	.inner-container {
+		margin: 0.3em 2em;	
+		display: flex;
+		flex-wrap: wrap;
+	}
+	header {
+		background-image: url('../images/layout/header.png');
+		background-size: cover;
+		padding: 2em;
+		text-align: center;
+		font-weight: 400;
+		color: white;
+	}
+
+
+
+	nav {
+		margin-bottom: 1em;
+	}
+
+	#dropdown-button {
+		width: 100%;
+		background-color: #FF9933;
+		color: white;
+		border: none;
+		padding: 1em 0;
+	}
+
+	.menu {
+		display: none;
+		background-color: white;
+		position: absolute;
+		width: 15em;
+		box-shadow: 10px 10px 8px 0 #888888;
+	}
+
+	.menu a {
+		width: 100%;
+		margin: 0 1em;
+		padding: 1em 0;
+		text-decoration: none;
+		color: black;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+	.menu a:last-child {
+		border: none;
+	}
+
+	.form-ul textarea, input[type=text], input[type=tel], input[type=email] {
+		width: 100%;
+		box-sizing: border-box;
+		resize: none;
+		margin-bottom: 0.5em;
+		padding: 1em;
+	}
+
+	.form-ul input[type=submit] {
+		border: none;
+		padding: 1em;
+		text-align: center;
+		background-color: #FF9933;
+		color: white;
+		width: 100%;
+		margin-top: 1em;
+	}
+
+
+	.show{
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
