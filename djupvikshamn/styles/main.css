@@ -93,7 +93,7 @@ h1, h2, h3, h4 {
 
 h1 { 
     font-size: 2em;
-    margin-bottom: 0.67em;
+	margin-bottom: 0.67em;
 }
 h2 {
     font-size: 1.5em;
@@ -107,6 +107,9 @@ h3 {
 h4 { 
     margin-top: 1.33em;
     margin-bottom: 1.33em;
+}
+p {
+	margin-bottom: 1em;
 }
 
 aside, section, article, footer {
@@ -122,26 +125,26 @@ figure {
 	margin: 1em 0;
 }
 
-#price-table th, td {
+th, td {
 	border: 1px solid white;
 	padding: 1em;
 }
 
-#price-table th {
+th {
 	background: #FF9933;
 	color: white;
 }
 
-#price-table td {
+td {
 	background: #dde9ee;
 	color: black;
 }
 
-#price-table caption {
+caption {
 	padding: 0.5em 0 1em 0;
 }
 
-#price-table {
+table {
 	width: 100%;
 	margin: 1em 0;
 	text-align: center;
