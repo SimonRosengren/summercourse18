@@ -82,7 +82,7 @@ img {
 to make it appear more smooth. .sticky + .container gives all container following sticky*/
 .sticky + main {
 	padding-top: 3em;
-  }
+}
 
 h1, h2, h3, h4 {
 	display: block;
@@ -93,7 +93,6 @@ h1, h2, h3, h4 {
 
 h1 { 
     font-size: 2em;
-	margin-bottom: 0.67em;
 }
 h2 {
     font-size: 1.5em;
@@ -116,8 +115,6 @@ p {
 aside, section, article, footer {
 	width: 100%;
 	background-color: white; 
-	padding: 2em;
-	margin: 1em 0;
 }
 
 figure {
@@ -126,8 +123,7 @@ figure {
 	margin: 1em 0;
 }
 
-main {
-	margin: 0.3em 2em;	
+main {	
 	display: flex;
 }
 
@@ -160,7 +156,6 @@ header {
 	background-image: url('../images/layout/header.png');
 	background-size: cover;
 	background-position: bottom center;
-	padding: 2em;
 	text-align: center;
 	font-weight: 400;
 	color: white;
@@ -168,12 +163,22 @@ header {
 
 /*Small screens*/
 @media (max-width: 1200px){
-	.large {
+	.large, .side-bar {
 		display: none;
 	}
 
 	main {
 		flex-wrap: wrap;
+		padding: 1em;
+	}
+
+	aside, section, article, footer {
+		padding: 2em;
+		margin: 1em;
+	}
+
+	header {
+		padding: 1.5em;
 	}
 
 	#header-title{
@@ -252,6 +257,7 @@ header {
 	header {
 		min-height: 8em;
 		text-align: left;
+		width: 100%;
 	}
 	#header-title{
 		font-weight: 100;
@@ -262,10 +268,12 @@ header {
 	#dropdown-button{
 		display: none;
 	}
+	nav {
+		width: 100%;
+	}
 	.menu {
 		display: flex;
 		justify-content: flex-start;
-		padding: 1em 0;
 		background:  white;
 	}
 	.menu a {
@@ -279,6 +287,6 @@ header {
 	}
 
 	.side-bar {
-		width: 15%;
+		width: 30%;
 	}
 }
