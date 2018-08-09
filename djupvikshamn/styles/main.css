@@ -80,7 +80,7 @@ img {
 
 /*Pushes down the container a bit so when nav bar sticks to top
 to make it appear more smooth. .sticky + .container gives all container following sticky*/
-.sticky + .inner-container {
+.sticky + main {
 	padding-top: 3em;
   }
 
@@ -106,16 +106,17 @@ h3 {
 }
 h4 { 
     margin-top: 1.33em;
-    margin-bottom: 1.33em;
+	margin-bottom: 1.33em;
 }
 p {
 	margin-bottom: 1em;
+	line-height: 1.4;
 }
 
 aside, section, article, footer {
 	width: 100%;
 	background-color: white; 
-	padding: 1em;
+	padding: 2em;
 	margin: 1em 0;
 }
 
@@ -123,6 +124,11 @@ figure {
 	width: 100%;
 	background-color: white; 
 	margin: 1em 0;
+}
+
+main {
+	margin: 0.3em 2em;	
+	display: flex;
 }
 
 th, td {
@@ -150,27 +156,30 @@ table {
 	text-align: center;
 }
 
+header {
+	background-image: url('../images/layout/header.png');
+	background-size: cover;
+	background-position: bottom center;
+	padding: 2em;
+	text-align: center;
+	font-weight: 400;
+	color: white;
+}
+
 /*Small screens*/
 @media (max-width: 1200px){
 	.large {
 		display: none;
 	}
 
-	.inner-container {
-		margin: 0.3em 2em;	
-		display: flex;
+	main {
 		flex-wrap: wrap;
 	}
-	header {
-		background-image: url('../images/layout/header.png');
-		background-size: cover;
-		padding: 2em;
-		text-align: center;
-		font-weight: 400;
-		color: white;
+
+	#header-title{
+		font-weight: 100;
+		font-size: 1.3em;
 	}
-
-
 
 	nav {
 		margin-bottom: 1em;
@@ -223,9 +232,53 @@ table {
 		margin-top: 1em;
 	}
 
-
 	.show{
 		display: flex;
 		flex-wrap: wrap;
+	}
+	.member-table small, td{
+		background-color: #dde9ee;
+		font-size: 75%;
+		padding: 0.5em 0;
+	}
+}
+
+/*LARGE SCREENS*/
+@media (min-width: 1201px){
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	header {
+		min-height: 8em;
+		text-align: left;
+	}
+	#header-title{
+		font-weight: 100;
+		font-size: 2em;
+		margin-top: 2em;
+		margin-left: 1em;
+	}
+	#dropdown-button{
+		display: none;
+	}
+	.menu {
+		display: flex;
+		justify-content: flex-start;
+		padding: 1em 0;
+		background:  white;
+	}
+	.menu a {
+		padding: 0 1em;
+		text-decoration: none;
+		color: #1F1F1F;
+	}
+
+	main {
+		width: 70%;
+	}
+
+	.side-bar {
+		width: 15%;
 	}
 }
