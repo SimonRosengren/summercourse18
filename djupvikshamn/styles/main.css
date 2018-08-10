@@ -115,11 +115,15 @@ aside, section, article, footer {
 figure {
 	width: 100%;
 	background-color: white; 
-	margin: 1em 0;
 }
 
 main {	
 	display: flex;
+}
+
+#isActive {
+	background: white;
+	color: #FF9933;
 }
 
 th, td {
@@ -138,12 +142,11 @@ td {
 }
 
 caption {
-	padding: 0.5em 0 1em 0;
+	padding: 0 0 1em 0;
 }
 
 table {
 	width: 100%;
-	margin: 1em 0;
 	text-align: center;
 }
 
@@ -156,6 +159,10 @@ header {
 	color: white;
 }
 
+.form-ul textarea, input[type=text], input[type=tel], input[type=email] {
+	font-family: 'Montserrat', sans-serif;
+}
+
 /*Small screens*/
 @media (max-width: 1200px){
 	.large, .side-bar {
@@ -165,11 +172,11 @@ header {
 	main {
 		flex-wrap: wrap;
 		padding: 1em;
+		background: url("../images/layout/body-pattern.jpeg")
 	}
 
 	aside, section, article, footer {
 		padding: 2em;
-		margin: 1em;
 	}
 
 	header {
@@ -185,10 +192,6 @@ header {
 	#header-title{
 		font-weight: 100;
 		font-size: 1.3em;
-	}
-
-	nav {
-		margin-bottom: 1em;
 	}
 
 	#dropdown-button {
@@ -212,8 +215,8 @@ header {
 		margin: 0 1em;
 		padding: 1em 0;
 		text-decoration: none;
-		color: black;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+		color: black;
 	}
 
 	.menu a:last-child {
@@ -280,11 +283,13 @@ header {
 		justify-content: flex-start;
 		background:  white;
 		padding-left: 15%;
+		margin-bottom: 1em;
+		background: #FF9933;
 	}
 	.menu a {
 		text-decoration: none;
-		color: #1F1F1F;
-		padding: 2em 3em 2em 0;
+		padding: 1em;
+		color: white;
 	}
 
 	main {
@@ -311,6 +316,12 @@ header {
 
 	main, .side-bar {
 		border-top: 1px solid #FF9933;
+	}
+
+	.main-100 {
+		width: 100%;
+		margin: 0 10%;
+		border-right: 1px solid #FF9933;
 	}
 
 	article, section {
