@@ -53,13 +53,13 @@ table {
 
 body {
 	font-family: 'Montserrat', sans-serif;	
-	background-image: url('../images/layout/body-pattern.jpeg');
+
 	color: #1F1F1F;
 }
 
 i {
 	font-style: italic;
-	font-size: 0.7em;
+	font-size: 0.9em;
 }
 
 button {
@@ -78,11 +78,6 @@ img {
 	margin: 0;
 }
 
-/*Pushes down the container a bit so when nav bar sticks to top
-to make it appear more smooth. .sticky + .container gives all container following sticky*/
-.sticky + main {
-	padding-top: 3em;
-}
 
 h1, h2, h3, h4 {
 	display: block;
@@ -181,6 +176,12 @@ header {
 		padding: 1.5em;
 	}
 
+	/*Pushes down the container a bit so when nav bar sticks to top
+	to make it appear more smooth. .sticky + .container gives all container following sticky*/
+	.sticky + main {
+		padding-top: 3em;
+	}
+
 	#header-title{
 		font-weight: 100;
 		font-size: 1.3em;
@@ -250,6 +251,9 @@ header {
 
 /*LARGE SCREENS*/
 @media (min-width: 1201px){
+	.small {
+		display: none;
+	}
 	.container {
 		display: flex;
 		flex-wrap: wrap;
@@ -263,7 +267,7 @@ header {
 		font-weight: 100;
 		font-size: 2em;
 		margin-top: 2em;
-		margin-left: 1em;
+		margin-left: 15%;
 	}
 	#dropdown-button{
 		display: none;
@@ -275,18 +279,71 @@ header {
 		display: flex;
 		justify-content: flex-start;
 		background:  white;
+		padding-left: 15%;
 	}
 	.menu a {
-		padding: 0 1em;
 		text-decoration: none;
 		color: #1F1F1F;
+		padding: 2em 3em 2em 0;
 	}
 
 	main {
-		width: 70%;
+		background-color: white;
+		flex-wrap: wrap;
+		width: 49%;
+		margin: 0 1% 4% 10%;
+		padding: 5%;
+		border-left: 1px solid #FF9933;
 	}
 
 	.side-bar {
-		width: 30%;
+		background-color: white;
+		width: 16%;
+		margin: 0 10% 4% 1%;
+		padding: 5% 1%;
+		text-align: center;
+		border-right: 1px solid #FF9933;
+	}
+
+	.side-bar form, p {
+		text-align: left;
+	}
+
+	main, .side-bar {
+		border-top: 1px solid #FF9933;
+	}
+
+	article, section {
+		border-bottom: 1px solid  #CDC9C5;
+		margin-bottom: 3em;
+		padding-bottom: 3em;
+	}
+
+	.form-ul textarea, input[type=text], input[type=tel], input[type=email] {
+		width: 100%;
+		box-sizing: border-box;
+		resize: none;
+		margin-bottom: 0.5em;
+		padding: 1em;
+	}
+
+	.form-ul input[type=submit] {
+		border: none;
+		padding: 1em;
+		text-align: center;
+		background-color: #FF9933;
+		color: white;
+		width: 100%;
+		margin-top: 1em;
+	}
+
+	.faq-question {
+		font-size: 2em;
+		color: #FF9933;
+		margin-bottom: 0;
+	}
+
+	footer {
+		padding: 1em;
 	}
 }
